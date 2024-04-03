@@ -1,9 +1,26 @@
 import React from 'react';
+import SecondsCounter from './Components/SecondsCounter';
 
-const App = () => {
+/* componente principal quien recibe las propiedades className digits con valor según valores posicionales creadas en el componente 
+secondsCounter */
+
+const App = (props) => {
     return (
-        <h1>REACT APP</h1>
+        <>
+            <SecondsCounter
+                digitSix={props.digitSix}
+                digitFive={props.digitFive}
+                digitFour={props.digitFour}
+                digitThree={props.digitThree}
+                digitTwo={props.digitTwo}
+                digitOne={props.digitOne}
+
+            />
+        </>
     )
 }
 
 export default App;
+
+
+

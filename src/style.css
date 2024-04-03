@@ -1,0 +1,11 @@
+.principal{
+    width: 80%;
+    height: 220px;
+    margin-top: 50px;
+    border-radius: 25px;
+}
+
+.seconds{
+    font-size: 150px;
+
+}
