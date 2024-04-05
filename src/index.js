@@ -7,15 +7,32 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import "./style.css";
 import SecondsCounter from './Components/SecondsCounter';
 
-var i = 0 /* valor en el que  inicia el SecondsCounter */
 
-setInterval(() => { /* función que permite trabajar con intervalos de tiempo quien recibe como parámetro la función render y esta recibe
-al componente SecondsCounter. Por lo tanto, el SecondsCounter será renderizado según cantidad de segundos */
-    ReactDOM.createRoot(document.querySelector('#root')).render(<SecondsCounter digitOne={i}/>)
-    i++
+
+let i=0
+
+
+const root= ReactDOM.createRoot(document.querySelector('#root'))
+setInterval(() => { 
+
+    let unidad= Math.floor((i / 1) % 10)
+    let decena= Math.floor((i / 10) % 10)
+    let centena= Math.floor((i / 100) % 10)
+    let unidadMil= Math.floor((i / 1000) % 10)
+    let decenaMil= Math.floor((i / 10000) % 10)
+
+    root.render(<SecondsCounter digitOne={unidad} 
+                                digitTwo={decena} 
+                                digitThree={centena} 
+                                digitFour={unidadMil} 
+                                digitFive={decenaMil}/>)
+                                i++
+                            
 }, 1000);
+                               
+                            
+                            
+                            
+                            
 
-
-
-
-
+                            
